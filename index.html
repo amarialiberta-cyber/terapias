@@ -126,7 +126,7 @@
             text-align: left;
         }
 
-        /* --- SEÇÃO DE MÚSICA & SPOTIFY / YOUTUBE --- */
+        /* --- SEÇÃO DE MÚSICA & SPOTIFY --- */
         .music-section {
             background: rgba(43, 9, 31, 0.6);
             backdrop-filter: blur(25px);
@@ -159,6 +159,22 @@
             overflow: hidden;
             border: 2px solid rgba(255, 128, 171, 0.4);
             box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+        }
+
+        /* Player Nativo Estilizado */
+        .custom-audio-box {
+            margin-top: 20px;
+            background: rgba(25, 5, 20, 0.7);
+            border: 2px solid rgba(255, 128, 171, 0.4);
+            padding: 20px;
+            border-radius: 14px;
+            box-shadow: inset 0 2px 6px rgba(255,255,255,0.2);
+        }
+
+        .custom-audio-box audio {
+            width: 100%;
+            outline: none;
+            filter: sepia(20%) hue-rotate(250deg) saturate(150%);
         }
 
         /* Seção de Contato */
@@ -338,7 +354,7 @@
             transform: translateX(4px);
         }
 
-        /* Controles de Música na Barra de Tarefas (Voltar, Play/Pause, Avançar, CD) */
+        /* Controles de Música na Barra de Tarefas */
         .taskbar-player {
             display: flex;
             align-items: center;
@@ -411,7 +427,6 @@
             text-shadow: 0 2px 8px rgba(255, 215, 0, 0.5);
         }
 
-        /* Playlist Frutiger Secreta Oculta no Código */
         .secret-frutiger-hidden {
             display: none !important;
         }
@@ -455,28 +470,27 @@
             </div>
         </div>
 
-        <!-- Seção de Música: Playlist Cigana (Visível) + Barra de Pesquisa Spotify/YouTube -->
+        <!-- Seção de Música com a Playlist do Spotify e o Player de Áudio Direto -->
         <div class="music-section">
-            <h2>Trilha Sonora & Pesquisa Musical Mística</h2>
-            <p>Ouça nossa Playlist Cigana oficial ou pesquise músicas e artistas diretamente.</p>
+            <h2>Trilha Sonora & Frequências Místicas</h2>
+            <p>Ouça nossa Playlist Cigana oficial e controle suas músicas relaxantes.</p>
             
-            <!-- 1. Sua Playlist Cigana Oficial -->
+            <!-- 1. Sua Playlist Cigana Oficial do Spotify -->
             <div class="spotify-container">
                 <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/37i9dQZF1DWZIpOinWKuBz?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
             </div>
 
-            <!-- 2. Player de Pesquisa do Spotify (Sem ser playlist fixa, permite buscar músicas) -->
-            <div class="spotify-container" style="margin-top: 20px;">
-                <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/4cOdK2wGLETKBW3PvgPWqT?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-            </div>
-
-            <!-- 3. Player de Pesquisa / Incorporação do YouTube Music -->
-            <div class="spotify-container" style="margin-top: 20px;">
-                <iframe width="100%" height="152" src="https://www.youtube.com/embed/jfKfPfyJRdk" title="YouTube music player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" style="border-radius:12px;" allowfullscreen></iframe>
+            <!-- 2. Player de Áudio Direto (Funciona garantido em qualquer celular ou PC) -->
+            <div class="custom-audio-box">
+                <p style="margin-bottom: 8px; font-size: 0.95rem; color: #ff80ab; font-family: 'Cinzel', serif;">Player de Frequências Místicas</p>
+                <audio controls>
+                    <source src="https://cdn.pixabay.com/download/audio/2022/05/27/audio_1808fbf756.mp3?filename=meditation-relaxing-ambient-111414.mp3" type="audio/mpeg">
+                    Seu navegador não suporta áudio.
+                </audio>
             </div>
         </div>
 
-        <!-- PLAYLIST FRUTIGER SECRETA (Oculta para não perder, escondida no código) -->
+        <!-- PLAYLIST FRUTIGER SECRETA (Guardada e Oculta no Código) -->
         <div class="secret-frutiger-hidden">
             <iframe src="https://open.spotify.com/embed/playlist/37i9dQZF1DXa2PvUpywmrr" width="100%" height="152" frameborder="0"></iframe>
         </div>
@@ -491,10 +505,10 @@
         </div>
     </div>
 
-    <!-- Barra de Tarefas Estilo Windows Aero com Menu Iniciar e Controles de Música -->
+    <!-- Barra de Tarefas Estilo Windows Aero com Menu Iniciar e Controles -->
     <div class="windows-taskbar">
         
-        <!-- Menu Iniciar com o Botão Orb e Espiral -->
+        <!-- Menu Iniciar -->
         <div class="start-btn-container">
             <div class="windows-menu" id="windowsMenu">
                 <h3>Menu Iniciar</h3>
@@ -509,19 +523,19 @@
             </div>
         </div>
 
-        <!-- Controles de Player (Voltar, Play/Pause, Avançar, CD) -->
+        <!-- Controles de Player -->
         <div class="taskbar-player">
             <div class="spinning-cd" title="CD Rodando"></div>
             <div class="player-controls">
-                <button id="prevBtn" title="Música Anterior">⏮</button>
+                <button id="prevBtn" title="Reiniciar Música">⏮</button>
                 <button id="playPauseBtn" title="Tocar / Pausar">⏸</button>
-                <button id="nextBtn" title="Próxima Música">⏭</button>
+                <button id="nextBtn" title="Avançar Faixa">⏭</button>
             </div>
         </div>
 
     </div>
 
-    <!-- Áudio de Fundo Inicial -->
+    <!-- Áudio de Fundo Automático -->
     <audio id="bgMusic" autoplay loop>
         <source src="https://cdn.pixabay.com/download/audio/2022/05/27/audio_1808fbf756.mp3?filename=meditation-relaxing-ambient-111414.mp3" type="audio/mpeg">
     </audio>
@@ -531,7 +545,7 @@
         <p class="dev-credit">✨ Site criado em 5 minutos por uma verdadeira lenda (o filho/a criativo/a que é muito foda)! 🚀</p>
     </footer>
 
-    <!-- Script JavaScript para o Menu Iniciar e os Botões de Música -->
+    <!-- Script JavaScript -->
     <script>
         const orbBtn = document.getElementById('orbBtn');
         const windowsMenu = document.getElementById('windowsMenu');
@@ -540,7 +554,6 @@
         const prevBtn = document.getElementById('prevBtn');
         const nextBtn = document.getElementById('nextBtn');
 
-        // Menu Iniciar
         orbBtn.addEventListener('click', () => {
             windowsMenu.classList.toggle('active');
         });
@@ -551,7 +564,6 @@
             }
         });
 
-        // Controles de Música (Play/Pause, Voltar e Avançar)
         let isPlaying = true;
         playPauseBtn.addEventListener('click', () => {
             if (isPlaying) {
@@ -566,13 +578,11 @@
         });
 
         prevBtn.addEventListener('click', () => {
-            alert('Voltando para o início da faixa mística!');
             bgMusic.currentTime = 0;
             bgMusic.play();
         });
 
         nextBtn.addEventListener('click', () => {
-            alert('Avançando na frequência sonora!');
             bgMusic.currentTime = 0;
             bgMusic.play();
         });
