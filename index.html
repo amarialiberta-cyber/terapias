@@ -4,146 +4,184 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Espaço Holístico & Terapias</title>
-    <!-- Importando uma fonte bonita e elegante do Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <!-- Fontes do Google -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;800&family=Plus+Jakarta+Sans:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
-        /* Estilos Gerais */
+        /* Estilos Gerais - Mistura Frutiger Aero (brilhos/vidros) com Neobrutalismo (bordas e sombras duras) */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Poppins', sans-serif; /* Usando a nova fonte moderna */
+            font-family: 'Plus+Jakarta+Sans', sans-serif;
         }
 
         body {
-            background-color: #f9f6f0;
-            color: #333;
+            background: linear-gradient(135deg, #2b091f 0%, #3f1636 50%, #1a0513 100%);
+            color: #fce4ec;
             line-height: 1.6;
+            min-height: 100vh;
         }
 
-        /* Cabeçalho / Banner */
+        /* Cabeçalho / Banner com toque Frutiger Aero (vidro translúcido e brilho) */
         header {
-            background: linear-gradient(135deg, #4a2e56, #2d1836);
-            color: #f3e5f5;
+            background: rgba(43, 9, 31, 0.75);
+            backdrop-filter: blur(12px);
+            border-bottom: 4px solid #000;
+            box-shadow: 6px 6px 0px #000;
+            color: #fff;
             text-align: center;
             padding: 60px 20px;
+            margin-bottom: 30px;
         }
 
         header h1 {
-            font-family: 'Cinzel', serif; /* Fonte com estilo mais refinado para o título */
-            font-size: 2.5rem;
-            margin-bottom: 10px;
-            letter-spacing: 1px;
+            font-family: 'Cinzel', serif;
+            font-size: 2.8rem;
+            margin-bottom: 12px;
+            letter-spacing: 2px;
+            text-shadow: 2px 2px 0px #880e4f;
         }
 
         header p {
-            font-size: 1.2rem;
-            opacity: 0.9;
+            font-size: 1.15rem;
+            opacity: 0.95;
+            font-weight: 600;
+            color: #f8bbd0;
         }
 
         /* Seção Principal */
         .container {
-            max-width: 900px;
+            max-width: 950px;
             margin: 0 auto;
-            padding: 40px 20px;
+            padding: 20px 20px 50px 20px;
             display: block;
         }
 
         h2 {
             font-family: 'Cinzel', serif;
             text-align: center;
-            color: #4a2e56;
-            margin-bottom: 30px;
-            font-size: 1.8rem;
+            color: #f8bbd0;
+            margin-bottom: 35px;
+            font-size: 2rem;
+            text-shadow: 2px 2px 0px #4a148c;
         }
 
-        /* Cartões dos Serviços */
+        /* Cartões dos Serviços (Estilo Neobrutalista com vidro Frutiger Aero) */
         .services-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 25px;
             margin-bottom: 50px;
         }
 
         .card {
-            background: #ffffff;
-            padding: 25px;
-            border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-            border-top: 4px solid #8e24aa;
-            transition: transform 0.2s;
+            background: rgba(74, 20, 74, 0.45);
+            backdrop-filter: blur(10px);
+            padding: 30px;
+            border-radius: 16px;
+            border: 3px solid #ff80ab;
+            box-shadow: 6px 6px 0px #ff80ab;
+            transition: transform 0.2s, box-shadow 0.2s;
         }
 
         .card:hover {
-            transform: translateY(-5px);
+            transform: translate(-4px, -4px);
+            box-shadow: 10px 10px 0px #ff4081;
         }
 
         .card h3 {
-            color: #6a1b9a;
-            margin-bottom: 10px;
+            font-family: 'Cinzel', serif;
+            color: #ff80ab;
+            margin-bottom: 12px;
+            font-size: 1.3rem;
         }
 
-        /* Seção de Contato e Redes Sociais */
+        .card p {
+            color: #f3e5f5;
+            font-size: 0.95rem;
+        }
+
+        /* Seção de Contato e Botões (Estilo Frutiger Aero / Brilhantes) */
         .cta-section {
             text-align: center;
-            background: #fff;
-            padding: 40px 20px;
-            border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            background: rgba(43, 9, 31, 0.85);
+            backdrop-filter: blur(12px);
+            padding: 45px 20px;
+            border-radius: 16px;
+            border: 3px solid #ab47bc;
+            box-shadow: 8px 8px 0px #000;
+        }
+
+        .cta-section h2 {
+            margin-bottom: 15px;
+        }
+
+        .cta-section p {
+            margin-bottom: 25px;
+            color: #e1bee7;
         }
 
         .btn-whatsapp, .btn-insta {
             display: inline-block;
-            padding: 12px 25px;
-            font-size: 1rem;
-            font-weight: bold;
+            padding: 14px 30px;
+            font-size: 1.05rem;
+            font-weight: 700;
             text-decoration: none;
             border-radius: 30px;
-            margin: 10px 5px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-            transition: opacity 0.2s;
+            margin: 10px 8px;
+            border: 2px solid rgba(255, 255, 255, 0.4);
+            transition: transform 0.2s, box-shadow 0.2s;
         }
 
+        /* Botão WhatsApp - Vidro brilhante Frutiger Aero */
         .btn-whatsapp {
-            background-color: #25d366;
+            background: linear-gradient(135deg, #25d366, #128c7e);
             color: white;
+            box-shadow: 0 8px 20px rgba(37, 211, 102, 0.4), inset 0 2px 5px rgba(255,255,255,0.6);
         }
 
         .btn-whatsapp:hover {
-            background-color: #128c7e;
+            transform: scale(1.05);
+            box-shadow: 0 10px 25px rgba(37, 211, 102, 0.6);
         }
 
+        /* Botão Instagram - Vidro brilhante Frutiger Aero */
         .btn-insta {
-            background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+            background: linear-gradient(135deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
             color: white;
+            box-shadow: 0 8px 20px rgba(220, 39, 67, 0.4), inset 0 2px 5px rgba(255,255,255,0.6);
         }
 
         .btn-insta:hover {
-            opacity: 0.9;
+            transform: scale(1.05);
+            box-shadow: 0 10px 25px rgba(220, 39, 67, 0.6);
         }
 
         /* Rodapé */
         footer {
             text-align: center;
-            padding: 25px;
-            background-color: #2d1836;
-            color: #ddd;
-            font-size: 0.9rem;
-            margin-top: 40px;
+            padding: 30px;
+            background-color: #1a0513;
+            color: #e1bee7;
+            font-size: 0.95rem;
+            margin-top: 50px;
+            border-top: 3px solid #000;
             line-height: 1.8;
         }
 
         footer .dev-credit {
             color: #ffd700;
             font-weight: bold;
+            margin-top: 8px;
+            text-shadow: 1px 1px 0px #000;
         }
     </style>
 </head>
 <body>
 
     <header>
-        <h1>Terapias Holísticas & Cuidado</h1>
-        <p>Intuidanse • Sekhem Kundalini • Tarot Terapêutico</p>
+        <h1>Espaço Holístico & Terapias</h1>
+        <p>Intuidanse • Iskhem Kundalini • Tarot Terapêutico • Leitura de Cartas</p>
     </header>
 
     <div class="container">
@@ -156,7 +194,7 @@
             </div>
 
             <div class="card">
-                <h3>Sekhem / Iskhem Kundalini</h3>
+                <h3>Iskhem Kundalini</h3>
                 <p>Canalização e harmonização de energia vital para equilíbrio emocional, espiritual e físico.</p>
             </div>
 
@@ -175,10 +213,10 @@
             <h2>Entre em Contato</h2>
             <p>Agende sua consulta ou acompanhe o trabalho nas redes sociais.</p>
             
-            <!-- Botão do WhatsApp (lembre de colocar o número com DDD e 55) -->
+            <!-- Botão do WhatsApp (lembre de colocar o número com DDD e 55 no lugar de https://wa.me/5500999999999) -->
             <a href="https://wa.me/5500999999999" class="btn-whatsapp" target="_blank">Falar no WhatsApp</a>
             
-            <!-- Botão do Instagram (troque "seu_instagram" pelo perfil dela) -->
+            <!-- Botão do Instagram -->
             <a href="https://instagram.com/amaria.liberta" class="btn-insta" target="_blank">Ver no Instagram</a>
         </div>
     </div>
