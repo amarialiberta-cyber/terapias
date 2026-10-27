@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Espaço Holístico & Terapias</title>
+    <style>
+        /* Estilos Gerais */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f9f6f0;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Cabeçalho / Banner */
+        header {
+            background: linear-gradient(135deg, #4a2e56, #2d1836);
+            color: #f3e5f5;
+            text-align: center;
+            padding: 60px 20px;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            letter-spacing: 1px;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        /* Seção Principal */
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            display: block;
+        }
+
+        h2 {
+            text-align: center;
+            color: #4a2e56;
+            margin-bottom: 30px;
+            font-size: 1.8rem;
+        }
+
+        /* Cartões dos Serviços */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 50px;
+        }
+
+        .card {
+            background: #ffffff;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            border-top: 4px solid #8e24aa;
+            transition: transform 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card h3 {
+            color: #6a1b9a;
+            margin-bottom: 10px;
+        }
+
+        /* Botão de Contato / WhatsApp */
+        .cta-section {
+            text-align: center;
+            background: #fff;
+            padding: 40px 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+
+        .btn-whatsapp {
+            display: inline-block;
+            background-color: #25d366;
+            color: white;
+            padding: 15px 30px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 30px;
+            margin-top: 15px;
+            box-shadow: 0 4px 10px rgba(37, 211, 102, 0.3);
+        }
+
+        .btn-whatsapp:hover {
+            background-color: #128c7e;
+        }
+
+        /* Rodapé */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #2d1836;
+            color: #aaa;
+            font-size: 0.9rem;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Terapias Holísticas & Cuidado</h1>
+        <p>Intuidanse • Sekhem Kundalini • Tarot Terapêutico</p>
+    </header>
+
+    <div class="container">
+        <h2>Serviços e Atendimentos</h2>
+        
+        <div class="services-grid">
+            <div class="card">
+                <h3>Intuidanse</h3>
+                <p>Prática corporal e intuitiva para reconexão através do movimento livre e da energia interior.</p>
+            </div>
+
+            <div class="card">
+                <h3>Sekhem / Iskhem Kundalini</h3>
+                <p>Canalização e harmonização de energia vital para equilíbrio emocional, espiritual e físico.</p>
+            </div>
+
+            <div class="card">
+                <h3>Tarot Terapêutico</h3>
+                <p>Leitura focada em autoconhecimento, clareza sobre decisões e orientação para o seu momento atual.</p>
+            </div>
+
+            <div class="card">
+                <h3>Leitura de Cartas</h3>
+                <p>Sessões direcionadas para trazer respostas e reflexões sobre caminhos e desafios.</p>
+            </div>
+        </div>
+
+        <div class="cta-section">
+            <h2>Agende uma Consulta</h2>
+            <p>Entre em contato para saber mais sobre os atendimentos ou marcar seu horário.</p>
+            <!-- Troque o número abaixo pelo WhatsApp da sua mãe (com DDD) -->
+            <a href="https://wa.me/5500999999999" class="btn-whatsapp" target="_blank">Falar no WhatsApp</a>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 • Desenvolvido com carinho</p>
+    </footer>
+
+</body>
+</html>
