@@ -101,8 +101,6 @@
             border: 2px solid rgba(255, 128, 171, 0.45);
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4), inset 0 2px 6px rgba(255, 255, 255, 0.4);
             transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            position: relative;
-            overflow: hidden;
         }
 
         .card:hover {
@@ -159,22 +157,6 @@
             overflow: hidden;
             border: 2px solid rgba(255, 128, 171, 0.4);
             box-shadow: 0 8px 25px rgba(0,0,0,0.4);
-        }
-
-        /* Player Nativo Estilizado */
-        .custom-audio-box {
-            margin-top: 20px;
-            background: rgba(25, 5, 20, 0.7);
-            border: 2px solid rgba(255, 128, 171, 0.4);
-            padding: 20px;
-            border-radius: 14px;
-            box-shadow: inset 0 2px 6px rgba(255,255,255,0.2);
-        }
-
-        .custom-audio-box audio {
-            width: 100%;
-            outline: none;
-            filter: sepia(20%) hue-rotate(250deg) saturate(150%);
         }
 
         /* Seção de Contato */
@@ -354,11 +336,11 @@
             transform: translateX(4px);
         }
 
-        /* Controles de Música na Barra de Tarefas */
+        /* CD e Indicador na Barra de Tarefas */
         .taskbar-player {
             display: flex;
             align-items: center;
-            gap: 15px;
+            gap: 12px;
         }
 
         .spinning-cd {
@@ -383,30 +365,16 @@
             border-radius: 50%;
         }
 
-        .player-controls {
-            display: flex;
-            align-items: center;
-            gap: 8px;
+        .song-details h4 {
+            font-family: 'Cinzel', serif;
+            color: #ff80ab;
+            font-size: 0.85rem;
         }
 
-        .player-controls button {
-            background: rgba(255, 255, 255, 0.15);
-            border: 1px solid rgba(255, 128, 171, 0.4);
-            color: #fff;
-            width: 32px;
-            height: 32px;
-            border-radius: 50%;
-            cursor: pointer;
-            font-size: 0.8rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: 0.2s;
-        }
-
-        .player-controls button:hover {
-            background: #ff80ab;
-            color: #2b091f;
+        .song-details p {
+            color: #f3e5f5;
+            font-size: 0.75rem;
+            opacity: 0.9;
         }
 
         /* Rodapé Principal */
@@ -470,23 +438,14 @@
             </div>
         </div>
 
-        <!-- Seção de Música com a Playlist do Spotify e o Player de Áudio Direto -->
+        <!-- Seção de Música com a Playlist do Spotify -->
         <div class="music-section">
-            <h2>Trilha Sonora & Frequências Místicas</h2>
-            <p>Ouça nossa Playlist Cigana oficial e controle suas músicas relaxantes.</p>
+            <h2>Trilha Sonora & Atmosfera Mística</h2>
+            <p>Ouça nossa Playlist Cigana oficial diretamente por aqui.</p>
             
-            <!-- 1. Sua Playlist Cigana Oficial do Spotify -->
+            <!-- Playlist Oficial do Spotify -->
             <div class="spotify-container">
                 <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/37i9dQZF1DWZIpOinWKuBz?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-            </div>
-
-            <!-- 2. Player de Áudio Direto (Funciona garantido em qualquer celular ou PC) -->
-            <div class="custom-audio-box">
-                <p style="margin-bottom: 8px; font-size: 0.95rem; color: #ff80ab; font-family: 'Cinzel', serif;">Player de Frequências Místicas</p>
-                <audio controls>
-                    <source src="https://cdn.pixabay.com/download/audio/2022/05/27/audio_1808fbf756.mp3?filename=meditation-relaxing-ambient-111414.mp3" type="audio/mpeg">
-                    Seu navegador não suporta áudio.
-                </audio>
             </div>
         </div>
 
@@ -500,12 +459,13 @@
             <h2>Entre em Contato</h2>
             <p>Agende sua consulta ou acompanhe o trabalho nas redes sociais da nossa plataforma.</p>
             
-            <a href="https://wa.me/5500999999999" class="btn-whatsapp" target="_blank">Falar no WhatsApp</a>
+            <!-- Botão do WhatsApp com o número oficial corrigido -->
+            <a href="https://wa.me/5522981751110" class="btn-whatsapp" target="_blank">Falar no WhatsApp</a>
             <a href="https://instagram.com/amaria.liberta" class="btn-insta" target="_blank">Ver no Instagram</a>
         </div>
     </div>
 
-    <!-- Barra de Tarefas Estilo Windows Aero com Menu Iniciar e Controles -->
+    <!-- Barra de Tarefas Estilo Windows Aero com Menu Iniciar -->
     <div class="windows-taskbar">
         
         <!-- Menu Iniciar -->
@@ -514,7 +474,8 @@
                 <h3>Menu Iniciar</h3>
                 <ul>
                     <li><a href="https://instagram.com/amaria.liberta" target="_blank">📸 Instagram Principal</a></li>
-                    <li><a href="https://wa.me/5500999999999" target="_blank">💬 WhatsApp de Atendimento</a></li>
+                    <!-- WhatsApp do Menu Iniciar também atualizado -->
+                    <li><a href="https://wa.me/5522981751110" target="_blank">💬 WhatsApp de Atendimento</a></li>
                     <li><a href="https://instagram.com" target="_blank">🔮 Canal / Outras Redes</a></li>
                 </ul>
             </div>
@@ -523,36 +484,26 @@
             </div>
         </div>
 
-        <!-- Controles de Player -->
+        <!-- Indicador de Trilha Sonora na Barra -->
         <div class="taskbar-player">
             <div class="spinning-cd" title="CD Rodando"></div>
-            <div class="player-controls">
-                <button id="prevBtn" title="Reiniciar Música">⏮</button>
-                <button id="playPauseBtn" title="Tocar / Pausar">⏸</button>
-                <button id="nextBtn" title="Avançar Faixa">⏭</button>
+            <div class="song-details">
+                <h4>Atmosfera Mística</h4>
+                <p>Playlist ativa</p>
             </div>
         </div>
 
     </div>
-
-    <!-- Áudio de Fundo Automático -->
-    <audio id="bgMusic" autoplay loop>
-        <source src="https://cdn.pixabay.com/download/audio/2022/05/27/audio_1808fbf756.mp3?filename=meditation-relaxing-ambient-111414.mp3" type="audio/mpeg">
-    </audio>
 
     <footer>
         <p>&copy; 2026 • Espaço Holístico</p>
         <p class="dev-credit">✨ Site criado em 5 minutos por uma verdadeira lenda (o filho/a criativo/a que é muito foda)! 🚀</p>
     </footer>
 
-    <!-- Script JavaScript -->
+    <!-- Script JavaScript do Menu Iniciar -->
     <script>
         const orbBtn = document.getElementById('orbBtn');
         const windowsMenu = document.getElementById('windowsMenu');
-        const bgMusic = document.getElementById('bgMusic');
-        const playPauseBtn = document.getElementById('playPauseBtn');
-        const prevBtn = document.getElementById('prevBtn');
-        const nextBtn = document.getElementById('nextBtn');
 
         orbBtn.addEventListener('click', () => {
             windowsMenu.classList.toggle('active');
@@ -562,29 +513,6 @@
             if (!orbBtn.contains(e.target) && !windowsMenu.contains(e.target)) {
                 windowsMenu.classList.remove('active');
             }
-        });
-
-        let isPlaying = true;
-        playPauseBtn.addEventListener('click', () => {
-            if (isPlaying) {
-                bgMusic.pause();
-                playPauseBtn.textContent = '▶';
-                isPlaying = false;
-            } else {
-                bgMusic.play();
-                playPauseBtn.textContent = '⏸';
-                isPlaying = true;
-            }
-        });
-
-        prevBtn.addEventListener('click', () => {
-            bgMusic.currentTime = 0;
-            bgMusic.play();
-        });
-
-        nextBtn.addEventListener('click', () => {
-            bgMusic.currentTime = 0;
-            bgMusic.play();
         });
     </script>
 
