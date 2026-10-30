@@ -218,18 +218,18 @@
             box-shadow: 0 15px 35px rgba(220, 39, 67, 0.8);
         }
 
-        /* --- BARRA DE TAREFA / MENU INICIAR ESTILO WINDOWS AERO --- */
+        /* --- BARRA DE TAREFA ESTILO WINDOWS 7 AERO --- */
         .windows-taskbar {
             position: fixed;
             bottom: 0;
             left: 0;
             width: 100%;
             height: 65px;
-            background: rgba(25, 5, 20, 0.95);
-            backdrop-filter: blur(30px);
-            -webkit-backdrop-filter: blur(30px);
-            border-top: 2px solid rgba(255, 128, 171, 0.4);
-            box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.7);
+            background: linear-gradient(to top, rgba(20, 3, 15, 0.95), rgba(45, 10, 35, 0.9));
+            backdrop-filter: blur(25px);
+            -webkit-backdrop-filter: blur(25px);
+            border-top: 2px solid rgba(255, 128, 171, 0.5);
+            box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.8), inset 0 1px 0 rgba(255, 255, 255, 0.4);
             display: flex;
             align-items: center;
             justify-content: space-between;
@@ -242,27 +242,28 @@
         }
 
         .orb-button {
-            width: 48px;
-            height: 48px;
+            width: 50px;
+            height: 50px;
             border-radius: 50%;
-            background: radial-gradient(circle at 30% 30%, #ab47bc 0%, #4a148c 50%, #2b091f 100%);
-            border: 2px solid rgba(255, 255, 255, 0.8);
-            box-shadow: 0 0 15px rgba(171, 71, 188, 0.9), inset 0 0 10px rgba(255, 255, 255, 0.9);
+            background: radial-gradient(circle at 30% 30%, #ab47bc 0%, #4a148c 60%, #1a0513 100%);
+            border: 2px solid rgba(255, 255, 255, 0.9);
+            box-shadow: 0 0 18px rgba(171, 71, 188, 1), inset 0 0 12px rgba(255, 255, 255, 0.9), inset 0 -5px 8px rgba(0, 0, 0, 0.7);
             cursor: pointer;
             display: flex;
             align-items: center;
             justify-content: center;
-            transition: transform 0.2s;
+            transition: transform 0.2s, box-shadow 0.2s;
         }
 
         .orb-button:hover {
-            transform: scale(1.1);
+            transform: scale(1.12);
+            box-shadow: 0 0 25px rgba(255, 128, 171, 1), inset 0 0 16px rgba(255, 255, 255, 1);
         }
 
         .orb-spiral {
-            width: 26px;
-            height: 26px;
-            border: 2px dashed rgba(255, 255, 255, 0.95);
+            width: 28px;
+            height: 28px;
+            border: 3px dashed rgba(255, 255, 255, 0.95);
             border-radius: 50%;
             border-top-color: #ff80ab;
             border-left-color: #ffd700;
@@ -274,40 +275,47 @@
             100% { transform: rotate(360deg); }
         }
 
-        /* Menu Iniciar Windows com ANIMAÇÃO SUAVE DE SUBIDA */
+        /* --- MENU ESPIRITUAL ESTILO WINDOWS 7 (Com Animação de Subida AERO) --- */
         .windows-menu {
             position: absolute;
-            bottom: 70px;
+            bottom: 75px;
             left: 0;
-            width: 280px;
-            background: rgba(43, 9, 31, 0.98);
-            backdrop-filter: blur(35px);
-            -webkit-backdrop-filter: blur(35px);
-            border: 2px solid rgba(255, 128, 171, 0.6);
-            border-radius: 12px 12px 0 0;
-            box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.9);
-            padding: 15px;
+            width: 290px;
+            background: linear-gradient(135deg, rgba(50, 10, 40, 0.95) 0%, rgba(30, 5, 25, 0.98) 100%);
+            backdrop-filter: blur(40px);
+            -webkit-backdrop-filter: blur(40px);
+            border: 2px solid rgba(255, 128, 171, 0.7);
+            border-radius: 14px 14px 4px 4px;
+            box-shadow: 0 -15px 40px rgba(0, 0, 0, 0.9), inset 0 1px 0 rgba(255, 255, 255, 0.4);
+            padding: 16px;
             display: none;
             opacity: 0;
-            transform: translateY(25px);
-            transition: opacity 0.3s ease, transform 0.3s ease;
+            transform: translateY(30px) scale(0.95);
+            transition: opacity 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.275), transform 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.275);
             z-index: 10000;
         }
 
         .windows-menu.show {
             display: block !important;
             opacity: 1;
-            transform: translateY(0); /* Animação de subida para a posição correta */
+            transform: translateY(0) scale(1);
         }
 
-        .windows-menu h3 {
+        /* Cabeçalho estilo Windows 7 Start Menu */
+        .win7-menu-header {
+            background: rgba(136, 14, 79, 0.4);
+            border: 1px solid rgba(255, 128, 171, 0.3);
+            border-radius: 8px;
+            padding: 10px;
+            margin-bottom: 12px;
+            text-align: center;
+        }
+
+        .win7-menu-header h3 {
             font-family: 'Cinzel', serif;
             color: #ff80ab;
-            font-size: 1rem;
-            margin-bottom: 10px;
-            border-bottom: 1px solid rgba(255, 128, 171, 0.3);
-            padding-bottom: 6px;
-            text-align: center;
+            font-size: 1.05rem;
+            text-shadow: 0 1px 4px rgba(0,0,0,0.8);
         }
 
         .windows-menu ul {
@@ -321,36 +329,38 @@
         .windows-menu a {
             display: flex;
             align-items: center;
-            padding: 8px 12px;
+            padding: 10px 14px;
             color: #f3e5f5;
             text-decoration: none;
-            background: rgba(255, 255, 255, 0.08);
-            border: 1px solid rgba(255, 128, 171, 0.3);
+            background: rgba(255, 255, 255, 0.06);
+            border: 1px solid rgba(255, 128, 171, 0.25);
             border-radius: 8px;
-            font-size: 0.9rem;
-            transition: all 0.2s;
+            font-size: 0.95://rem;
+            font-weight: 600;
+            transition: all 0.25s ease;
         }
 
         .windows-menu a:hover {
-            background: rgba(171, 71, 188, 0.7);
-            border-color: #ff80ab;
-            transform: translateX(4px);
+            background: linear-gradient(90deg, rgba(171, 71, 188, 0.7), rgba(255, 128, 171, 0.5));
+            border-color: #ffd700;
+            transform: translateX(6px);
+            box-shadow: 0 0 12px rgba(255, 128, 171, 0.5);
         }
 
-        /* CD e Indicador na Barra de Tarefas */
+        /* CD e Player na Barra de Tarefas */
         .taskbar-player {
             display: flex;
             align-items: center;
-            gap: 12px;
+            gap: 15px;
         }
 
         .spinning-cd {
-            width: 38px;
-            height: 38px;
+            width: 40px;
+            height: 40px;
             border-radius: 50%;
             background: radial-gradient(circle, #ffd700 0%, #ff80ab 30%, #4a148c 60%, #111 100%);
-            border: 2px solid rgba(255,255,255,0.8);
-            box-shadow: 0 0 12px rgba(255, 128, 171, 0.9);
+            border: 2px solid rgba(255,255,255,0.9);
+            box-shadow: 0 0 15px rgba(255, 128, 171, 1), inset 0 0 8px rgba(255,255,255,0.9);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -359,23 +369,38 @@
 
         .spinning-cd::after {
             content: '';
-            width: 10px;
-            height: 10px;
+            width: 12px;
+            height: 12px;
             background: #2b091f;
             border: 2px solid #fff;
             border-radius: 50%;
         }
 
-        .song-details h4 {
-            font-family: 'Cinzel', serif;
-            color: #ff80ab;
-            font-size: 0.85rem;
+        .player-controls {
+            display: flex;
+            align-items: center;
+            gap: 8px;
         }
 
-        .song-details p {
-            color: #f3e5f5;
-            font-size: 0.75rem;
-            opacity: 0.9;
+        .player-controls button {
+            background: rgba(255, 255, 255, 0.15);
+            border: 1px solid rgba(255, 128, 171, 0.5);
+            color: #fff;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 0.85rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: 0.2s;
+        }
+
+        .player-controls button:hover {
+            background: #ff80ab;
+            color: #2b091f;
+            box-shadow: 0 0 10px rgba(255, 128, 171, 0.8);
         }
 
         /* Rodapé Principal */
@@ -444,7 +469,6 @@
             <h2>Trilha Sonora & Atmosfera Mística</h2>
             <p>Ouça nossa Playlist Cigana oficial diretamente por aqui.</p>
             
-            <!-- Playlist Oficial do Spotify -->
             <div class="spotify-container">
                 <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/37i9dQZF1DWZIpOinWKuBz?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
             </div>
@@ -465,45 +489,58 @@
         </div>
     </div>
 
-    <!-- Barra de Tarefas Estilo Windows Aero com Menu Iniciar Animado -->
+    <!-- Barra de Tarefas Estilo Windows 7 Aero -->
     <div class="windows-taskbar">
         
-        <!-- Menu Iniciar -->
+        <!-- Menu Espiritual com Animação Windows 7 -->
         <div class="start-btn-container">
             <div class="windows-menu" id="windowsMenu">
-                <h3>Menu Iniciar</h3>
+                <div class="win7-menu-header">
+                    <h3>Menu Espiritual</h3>
+                </div>
                 <ul>
                     <li><a href="https://instagram.com/amaria.liberta" target="_blank">📸 Instagram Principal</a></li>
                     <li><a href="https://wa.me/5522981751110" target="_blank">💬 WhatsApp de Atendimento</a></li>
                     <li><a href="https://instagram.com" target="_blank">🔮 Canal / Outras Redes</a></li>
                 </ul>
             </div>
-            <div class="orb-button" id="orbBtn" title="Abrir Menu Iniciar">
+            <div class="orb-button" id="orbBtn" title="Abrir Menu Espiritual">
                 <div class="orb-spiral"></div>
             </div>
         </div>
 
-        <!-- Indicador de Trilha Sonora na Barra -->
+        <!-- Player de Música Integrado na Barra com CD e Controles -->
         <div class="taskbar-player">
             <div class="spinning-cd" title="CD Rodando"></div>
-            <div class="song-details">
-                <h4>Atmosfera Mística</h4>
-                <p>Playlist ativa</p>
+            <div class="player-controls">
+                <button id="prevBtn" title="Reiniciar Música">⏮</button>
+                <button id="playPauseBtn" title="Tocar / Pausar">⏸</button>
+                <button id="nextBtn" title="Avançar Frequência">⏭</button>
             </div>
         </div>
 
     </div>
+
+    <!-- Áudio de Fundo Automático -->
+    <audio id="bgMusic" autoplay loop>
+        <source src="https://cdn.pixabay.com/download/audio/2022/05/27/audio_1808fbf756.mp3?filename=meditation-relaxing-ambient-111414.mp3" type="audio/mpeg">
+    </audio>
 
     <footer>
         <p>&copy; 2026 • Espaço Holístico</p>
         <p class="dev-credit">✨ Site criado em 5 minutos por uma verdadeira lenda (o filho/a criativo/a que é muito foda)! 🚀</p>
     </footer>
 
-    <!-- Script JavaScript para a Animação e Funcionamento do Menu -->
+    <!-- Script JavaScript Otimizado -->
     <script>
         const orbBtn = document.getElementById('orbBtn');
         const windowsMenu = document.getElementById('windowsMenu');
+        const bgMusic = document.getElementById('bgMusic');
+        const playPauseBtn = document.getElementById('playPauseBtn');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
 
+        // Abertura do Menu Estilo Windows 7
         orbBtn.addEventListener('click', (event) => {
             event.stopPropagation();
             windowsMenu.classList.toggle('show');
@@ -513,6 +550,30 @@
             if (!windowsMenu.contains(event.target) && !orbBtn.contains(event.target)) {
                 windowsMenu.classList.remove('show');
             }
+        });
+
+        // Controles de Áudio da Barra
+        let isPlaying = true;
+        playPauseBtn.addEventListener('click', () => {
+            if (isPlaying) {
+                bgMusic.pause();
+                playPauseBtn.textContent = '▶';
+                isPlaying = false;
+            } else {
+                bgMusic.play();
+                playPauseBtn.textContent = '⏸';
+                isPlaying = true;
+            }
+        });
+
+        prevBtn.addEventListener('click', () => {
+            bgMusic.currentTime = 0;
+            bgMusic.play();
+        });
+
+        nextBtn.addEventListener('click', () => {
+            bgMusic.currentTime = 0;
+            bgMusic.play();
         });
     </script>
 
