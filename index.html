@@ -23,7 +23,6 @@
             padding-bottom: 120px;
         }
 
-        /* Cabeçalho / Banner - Estilo Vidro Aero Intenso */
         header {
             background: rgba(43, 9, 31, 0.7);
             backdrop-filter: blur(30px);
@@ -52,7 +51,6 @@
             text-shadow: 0 1px 5px rgba(0,0,0,0.5);
         }
 
-        /* --- PLATAFORMA DE SERVIÇOS --- */
         .container {
             max-width: 1000px;
             margin: 0 auto;
@@ -124,7 +122,6 @@
             text-align: left;
         }
 
-        /* --- SEÇÃO DE MÚSICA & SPOTIFY --- */
         .music-section {
             background: rgba(43, 9, 31, 0.6);
             backdrop-filter: blur(25px);
@@ -159,7 +156,6 @@
             box-shadow: 0 8px 25px rgba(0,0,0,0.4);
         }
 
-        /* Seção de Contato */
         .cta-section {
             text-align: center;
             background: rgba(43, 9, 31, 0.7);
@@ -218,7 +214,7 @@
             box-shadow: 0 15px 35px rgba(220, 39, 67, 0.8);
         }
 
-        /* --- BARRA DE TAREFA ESTILO WINDOWS 7 AERO --- */
+        /* BARRA DE TAREFA ESTILO WINDOWS 7 AERO */
         .windows-taskbar {
             position: fixed;
             bottom: 0;
@@ -275,7 +271,7 @@
             100% { transform: rotate(360deg); }
         }
 
-        /* --- MENU ESPIRITUAL ESTILO WINDOWS 7 (Com Animação de Subida AERO) --- */
+        /* MENU ESPIRITUAL ESTILO WINDOWS 7 */
         .windows-menu {
             position: absolute;
             bottom: 75px;
@@ -301,7 +297,6 @@
             transform: translateY(0) scale(1);
         }
 
-        /* Cabeçalho Menu Espiritual */
         .win7-menu-header {
             background: rgba(136, 14, 79, 0.4);
             border: 1px solid rgba(255, 128, 171, 0.3);
@@ -347,7 +342,6 @@
             box-shadow: 0 0 12px rgba(255, 128, 171, 0.5);
         }
 
-        /* CD e Player na Barra de Tarefas */
         .taskbar-player {
             display: flex;
             align-items: center;
@@ -403,7 +397,6 @@
             box-shadow: 0 0 10px rgba(255, 128, 171, 0.8);
         }
 
-        /* Rodapé Principal */
         footer {
             text-align: center;
             padding: 25px 20px;
@@ -428,7 +421,6 @@
 </head>
 <body>
 
-    <!-- Cabeçalho -->
     <header>
         <h1>Espaço Holístico & Terapias</h1>
         <p>Intuidanse • Iskhem Kundalini • Tarot Terapêutico • Leitura de Cartas</p>
@@ -436,7 +428,6 @@
 
     <div class="container">
         
-        <!-- Plataforma de Serviços -->
         <div class="platform-dashboard">
             <h2>Plataforma de Atendimentos</h2>
             <p>Explore as práticas holísticas e caminhos de autoconhecimento disponíveis para o seu momento.</p>
@@ -464,7 +455,6 @@
             </div>
         </div>
 
-        <!-- Seção de Música com a Playlist do Spotify -->
         <div class="music-section">
             <h2>Trilha Sonora & Atmosfera Mística</h2>
             <p>Ouça nossa Playlist Cigana oficial diretamente por aqui.</p>
@@ -474,12 +464,10 @@
             </div>
         </div>
 
-        <!-- PLAYLIST FRUTIGER SECRETA -->
         <div class="secret-frutiger-hidden">
             <iframe src="https://open.spotify.com/embed/playlist/37i9dQZF1DXa2PvUpywmrr" width="100%" height="152" frameborder="0"></iframe>
         </div>
 
-        <!-- Seção de Contato -->
         <div class="cta-section">
             <h2>Entre em Contato</h2>
             <p>Agende sua consulta ou acompanhe o trabalho nas redes sociais da nossa plataforma.</p>
@@ -489,10 +477,8 @@
         </div>
     </div>
 
-    <!-- Barra de Tarefas Estilo Windows 7 Aero -->
     <div class="windows-taskbar">
         
-        <!-- Menu Espiritual com Animação Windows 7 -->
         <div class="start-btn-container">
             <div class="windows-menu" id="windowsMenu">
                 <div class="win7-menu-header">
@@ -509,7 +495,6 @@
             </div>
         </div>
 
-        <!-- Player de Música Integrado na Barra com CD e Controles -->
         <div class="taskbar-player">
             <div class="spinning-cd" title="CD Rodando"></div>
             <div class="player-controls">
@@ -521,7 +506,6 @@
 
     </div>
 
-    <!-- Áudio de Fundo Automático -->
     <audio id="bgMusic" autoplay loop>
         <source src="https://cdn.pixabay.com/download/audio/2022/05/27/audio_1808fbf756.mp3?filename=meditation-relaxing-ambient-111414.mp3" type="audio/mpeg">
     </audio>
@@ -531,7 +515,6 @@
         <p class="dev-credit">✨ Site criado em 5 minutos por uma verdadeira lenda (Levi que é muito foda)! 🚀</p>
     </footer>
 
-    <!-- Script JavaScript Otimizado -->
     <script>
         const orbBtn = document.getElementById('orbBtn');
         const windowsMenu = document.getElementById('windowsMenu');
@@ -540,7 +523,6 @@
         const prevBtn = document.getElementById('prevBtn');
         const nextBtn = document.getElementById('nextBtn');
 
-        // Abertura do Menu Estilo Windows 7
         orbBtn.addEventListener('click', (event) => {
             event.stopPropagation();
             windowsMenu.classList.toggle('show');
@@ -552,7 +534,6 @@
             }
         });
 
-        // Controles de Áudio da Barra
         let isPlaying = true;
         playPauseBtn.addEventListener('click', () => {
             if (isPlaying) {
@@ -578,4 +559,4 @@
     </script>
 
 </body>
-</html>
+</html> 
