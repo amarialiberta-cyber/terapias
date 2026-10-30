@@ -3,78 +3,293 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Espaço Holístico & Terapias</title>
-    <!-- Fontes do Google -->
+    <title>Santuário Místico • Espaço Holístico</title>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;800&family=Plus+Jakarta+Sans:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Plus Jakarta Sans', sans-serif; }
-        body { background: linear-gradient(135deg, #2b091f 0%, #3f1636 50%, #1a0513 100%); color: #fce4ec; line-height: 1.6; min-height: 100vh; overflow-x: hidden; padding-bottom: 120px; }
-        header { background: rgba(43, 9, 31, 0.7); backdrop-filter: blur(30px); -webkit-backdrop-filter: blur(30px); border-bottom: 2px solid rgba(255, 128, 171, 0.4); box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6), inset 0 2px 5px rgba(255, 255, 255, 0.4); color: #fff; text-align: center; padding: 60px 20px; position: relative; }
-        header h1 { font-family: 'Cinzel', serif; font-size: 2.8rem; margin-bottom: 12px; letter-spacing: 2px; text-shadow: 0 2px 12px rgba(136, 14, 79, 0.8), 0 0 25px rgba(255, 128, 171, 0.5); }
-        header p { font-size: 1.15rem; opacity: 0.95; font-weight: 600; color: #f8bbd0; text-shadow: 0 1px 5px rgba(0,0,0,0.5); }
-        .container { max-width: 1000px; margin: 0 auto; padding: 30px 20px; }
-        .platform-dashboard { background: rgba(43, 9, 31, 0.6); backdrop-filter: blur(25px); -webkit-backdrop-filter: blur(25px); border: 2px solid rgba(255, 128, 171, 0.4); border-radius: 20px; padding: 30px; box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5), inset 0 2px 8px rgba(255, 255, 255, 0.35); margin-bottom: 40px; }
-        .platform-dashboard h2 { font-family: 'Cinzel', serif; color: #ff80ab; font-size: 1.6rem; margin-bottom: 15px; text-align: center; text-shadow: 0 2px 8px rgba(255, 128, 171, 0.6); }
-        .platform-dashboard p { text-align: center; color: #e1bee7; margin-bottom: 25px; font-size: 1rem; }
-        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; }
-        .card { background: linear-gradient(135deg, rgba(74, 20, 74, 0.5) 0%, rgba(43, 9, 31, 0.7) 100%); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); padding: 25px; border-radius: 16px; border: 2px solid rgba(255, 128, 171, 0.45); box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4), inset 0 2px 6px rgba(255, 255, 255, 0.4); transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
-        .card:hover { transform: translateY(-6px) scale(1.02); border-color: #ffd700; box-shadow: 0 15px 35px rgba(171, 71, 188, 0.6), inset 0 2px 10px rgba(255, 255, 255, 0.6); }
-        .card h3 { font-family: 'Cinzel', serif; color: #ff80ab; margin-bottom: 10px; font-size: 1.2rem; text-shadow: 0 1px 5px rgba(255, 128, 171, 0.5); }
-        .card p { color: #f3e5f5; font-size: 0.9rem; margin-bottom: 0; text-align: left; }
-        .music-section { background: rgba(43, 9, 31, 0.6); backdrop-filter: blur(25px); -webkit-backdrop-filter: blur(25px); border: 2px solid rgba(255, 128, 171, 0.4); border-radius: 20px; padding: 30px; box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5), inset 0 2px 8px rgba(255, 255, 255, 0.35); margin-bottom: 40px; text-align: center; }
-        .music-section h2 { font-family: 'Cinzel', serif; color: #ff80ab; font-size: 1.6rem; margin-bottom: 15px; text-shadow: 0 2px 8px rgba(255, 128, 171, 0.6); }
-        .music-section p { color: #e1bee7; margin-bottom: 20px; font-size: 1rem; }
-        .spotify-container { margin-top: 20px; border-radius: 12px; overflow: hidden; border: 2px solid rgba(255, 128, 171, 0.4); box-shadow: 0 8px 25px rgba(0,0,0,0.4); }
-        .cta-section { text-align: center; background: rgba(43, 9, 31, 0.7); backdrop-filter: blur(25px); -webkit-backdrop-filter: blur(25px); padding: 40px 20px; border-radius: 20px; border: 2px solid rgba(255, 128, 171, 0.4); box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5), inset 0 2px 8px rgba(255, 255, 255, 0.35); }
-        .cta-section h2 { font-family: 'Cinzel', serif; color: #ff80ab; margin-bottom: 12px; font-size: 1.8rem; text-shadow: 0 2px 8px rgba(255, 128, 171, 0.6); }
-        .cta-section p { margin-bottom: 25px; color: #e1bee7; }
-        .btn-whatsapp, .btn-insta, .btn-cazuadas { display: inline-block; padding: 14px 30px; font-size: 1.05rem; font-weight: 700; text-decoration: none; border-radius: 30px; margin: 10px 8px; border: 2px solid rgba(255, 255, 255, 0.5); transition: transform 0.3s, box-shadow 0.3s; }
-        .btn-whatsapp { background: linear-gradient(135deg, #25d366, #128c7e); color: white; box-shadow: 0 10px 25px rgba(37, 211, 102, 0.5), inset 0 2px 8px rgba(255, 255, 255, 0.7); }
-        .btn-whatsapp:hover { transform: scale(1.05); box-shadow: 0 15px 35px rgba(37, 211, 102, 0.8); }
-        .btn-insta { background: linear-gradient(135deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); color: white; box-shadow: 0 10px 25px rgba(220, 39, 67, 0.5), inset 0 2px 8px rgba(255, 255, 255, 0.7); }
-        .btn-insta:hover { transform: scale(1.05); box-shadow: 0 15px 35px rgba(220, 39, 67, 0.8); }
-        .btn-cazuadas { background: linear-gradient(135deg, #8E2DE2, #4A00E0); color: white; box-shadow: 0 10px 25px rgba(138, 45, 226, 0.5), inset 0 2px 8px rgba(255, 255, 255, 0.7); }
-        .btn-cazuadas:hover { transform: scale(1.05); box-shadow: 0 15px 35px rgba(138, 45, 226, 0.8); }
         
-        /* BARRA DE TAREFA ESTILO WINDOWS 7 AERO */
-        .windows-taskbar { position: fixed; bottom: 0; left: 0; width: 100%; height: 65px; background: linear-gradient(to top, rgba(20, 3, 15, 0.95), rgba(45, 10, 35, 0.9)); backdrop-filter: blur(25px); -webkit-backdrop-filter: blur(25px); border-top: 2px solid rgba(255, 128, 171, 0.5); box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.8), inset 0 1px 0 rgba(255, 255, 255, 0.4); display: flex; align-items: center; justify-content: space-between; padding: 0 20px; z-index: 9999; }
+        body { 
+            background: #09020d; 
+            color: #fce4ec; 
+            min-height: 100vh; 
+            overflow-x: hidden; 
+            padding-bottom: 120px;
+            position: relative;
+        }
+
+        /* FUNDO COM PARTÍCULAS CÓSMICAS ESTRELADAS */
+        .stars-bg {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background-image: 
+                radial-gradient(white, rgba(255,255,255,.2) 2px, transparent 40px),
+                radial-gradient(rgba(255,128,171,0.5), rgba(255,128,171,.1) 1px, transparent 30px);
+            background-size: 550px 550px, 350px 350px;
+            background-position: 0 0, 40px 60px;
+            z-index: -1;
+            opacity: 0.6;
+            animation: cosmicDrift 100s linear infinite;
+        }
+
+        @keyframes cosmicDrift {
+            0% { background-position: 0 0, 40px 60px; }
+            100% { background-position: 550px 550px, 390px 410px; }
+        }
+
+        header { 
+            text-align: center; 
+            padding: 70px 20px 30px 20px; 
+            position: relative; 
+        }
+
+        header h1 { 
+            font-family: 'Cinzel', serif; 
+            font-size: 3.2rem; 
+            margin-bottom: 10px; 
+            color: #ff94c2;
+            text-shadow: 0 0 25px rgba(255, 128, 171, 0.7), 0 0 50px rgba(171, 71, 188, 0.4);
+            letter-spacing: 3px;
+        }
+
+        header p { 
+            font-size: 1.1rem; 
+            color: #e1bee7; 
+            letter-spacing: 1px;
+            font-weight: 600;
+        }
+
+        .container { max-width: 1100px; margin: 0 auto; padding: 20px; }
+
+        /* JANELA PRINCIPAL ESTILO VIDRO MÁGICO */
+        .magic-window { 
+            background: rgba(30, 8, 25, 0.65); 
+            backdrop-filter: blur(35px); 
+            -webkit-backdrop-filter: blur(35px); 
+            border: 2px solid rgba(255, 128, 171, 0.4); 
+            border-radius: 24px; 
+            padding: 40px; 
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.8), inset 0 2px 10px rgba(255, 255, 255, 0.2); 
+            margin-bottom: 40px; 
+            position: relative;
+        }
+
+        .magic-window::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 5%; right: 5%; height: 2px;
+            background: linear-gradient(90deg, transparent, #ff80ab, transparent);
+        }
+
+        .magic-window h2 { 
+            font-family: 'Cinzel', serif; 
+            color: #ff80ab; 
+            font-size: 1.8rem; 
+            margin-bottom: 15px; 
+            text-align: center; 
+            text-shadow: 0 0 15px rgba(255, 128, 171, 0.5); 
+        }
+
+        .magic-window > p { text-align: center; color: #f3e5f5; margin-bottom: 30px; font-size: 1.05rem; }
+
+        /* GRID DE PRÁTICAS COM EFEITO 3D HOVER */
+        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 25px; }
+        
+        .card { 
+            background: linear-gradient(135deg, rgba(60, 15, 50, 0.6) 0%, rgba(20, 4, 15, 0.8) 100%); 
+            padding: 30px 25px; 
+            border-radius: 18px; 
+            border: 1px solid rgba(255, 128, 171, 0.3); 
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); 
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); 
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card::after {
+            content: '';
+            position: absolute;
+            top: -50%; left: -50%; width: 200%; height: 200%;
+            background: radial-gradient(circle, rgba(255,128,171,0.1) 0%, transparent 70%);
+            opacity: 0;
+            transition: opacity 0.4s;
+        }
+
+        .card:hover { 
+            transform: translateY(-8px) scale(1.03); 
+            border-color: #ffd700; 
+            box-shadow: 0 20px 40px rgba(255, 128, 171, 0.3), inset 0 0 15px rgba(255, 215, 0, 0.2); 
+        }
+
+        .card:hover::after { opacity: 1; }
+
+        .card h3 { font-family: 'Cinzel', serif; color: #ff94c2; margin-bottom: 12px; font-size: 1.3rem; }
+        .card p { color: #e1bee7; font-size: 0.95rem; text-align: left; line-height: 1.5; }
+
+        /* CONTAINER DO SPOTIFY */
+        .spotify-container { 
+            margin-top: 20px; 
+            border-radius: 16px; 
+            overflow: hidden; 
+            border: 2px solid rgba(255, 128, 171, 0.3); 
+            box-shadow: 0 10px 30px rgba(0,0,0,0.6); 
+        }
+
+        /* BOTÕES DE CONTATO ESTILIZADOS */
+        .cta-section { 
+            text-align: center; 
+            background: rgba(30, 8, 25, 0.65); 
+            backdrop-filter: blur(35px); 
+            -webkit-backdrop-filter: blur(35px); 
+            padding: 45px 20px; 
+            border-radius: 24px; 
+            border: 2px solid rgba(255, 128, 171, 0.4); 
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.8); 
+        }
+
+        .cta-section h2 { font-family: 'Cinzel', serif; color: #ff80ab; margin-bottom: 12px; font-size: 2rem; }
+        .cta-section p { margin-bottom: 30px; color: #e1bee7; font-size: 1.1rem; }
+
+        .btn-portal { 
+            display: inline-flex; 
+            align-items: center; 
+            gap: 10px;
+            padding: 16px 35px; 
+            font-size: 1.1rem; 
+            font-weight: 700; 
+            text-decoration: none; 
+            border-radius: 40px; 
+            margin: 10px 10px; 
+            border: 2px solid rgba(255, 255, 255, 0.4); 
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275); 
+        }
+
+        .btn-whatsapp { background: linear-gradient(135deg, #00E676, #00A859); color: #001a0a; box-shadow: 0 10px 30px rgba(0, 230, 118, 0.4); }
+        .btn-whatsapp:hover { transform: scale(1.08); box-shadow: 0 15px 40px rgba(0, 230, 118, 0.7); }
+
+        .btn-insta1 { background: linear-gradient(135deg, #f58529, #dd2a7b, #8134af); color: white; box-shadow: 0 10px 30px rgba(221, 42, 123, 0.4); }
+        .btn-insta1:hover { transform: scale(1.08); box-shadow: 0 15px 40px rgba(221, 42, 123, 0.7); }
+
+        .btn-insta2 { background: linear-gradient(135deg, #8E2DE2, #4A00E0); color: white; box-shadow: 0 10px 30px rgba(138, 45, 226, 0.4); }
+        .btn-insta2:hover { transform: scale(1.08); box-shadow: 0 15px 40px rgba(138, 45, 226, 0.7); }
+
+        /* BARRA ESTILO WINDOWS 7 MODERNA */
+        .windows-taskbar { 
+            position: fixed; 
+            bottom: 0; left: 0; width: 100%; height: 70px; 
+            background: linear-gradient(to top, rgba(15, 2, 12, 0.98), rgba(40, 8, 30, 0.9)); 
+            backdrop-filter: blur(30px); 
+            border-top: 2px solid rgba(255, 128, 171, 0.6); 
+            box-shadow: 0 -15px 40px rgba(0, 0, 0, 0.9); 
+            display: flex; align-items: center; justify-content: space-between; 
+            padding: 0 25px; 
+            z-index: 9999; 
+        }
+
         .start-btn-container { position: relative; }
-        .orb-button { width: 50px; height: 50px; border-radius: 50%; background: radial-gradient(circle at 30% 30%, #ab47bc 0%, #4a148c 60%, #1a0513 100%); border: 2px solid rgba(255, 255, 255, 0.9); box-shadow: 0 0 18px rgba(171, 71, 188, 1), inset 0 0 12px rgba(255, 255, 255, 0.9), inset 0 -5px 8px rgba(0, 0, 0, 0.7); cursor: pointer; display: flex; align-items: center; justify-content: center; transition: transform 0.2s, box-shadow 0.2s; }
-        .orb-button:hover { transform: scale(1.12); box-shadow: 0 0 25px rgba(255, 128, 171, 1), inset 0 0 16px rgba(255, 255, 255, 1); }
-        .orb-spiral { width: 28px; height: 28px; border: 3px dashed rgba(255, 255, 255, 0.95); border-radius: 50%; border-top-color: #ff80ab; border-left-color: #ffd700; animation: spin 6s linear infinite; }
+
+        .orb-button { 
+            width: 52px; height: 52px; border-radius: 50%; 
+            background: radial-gradient(circle at 30% 30%, #e040fb 0%, #7b1fa2 60%, #1a0513 100%); 
+            border: 2px solid rgba(255, 255, 255, 0.9); 
+            box-shadow: 0 0 20px rgba(224, 64, 251, 0.9), inset 0 0 12px rgba(255, 255, 255, 0.8); 
+            cursor: pointer; display: flex; align-items: center; justify-content: center; 
+            transition: transform 0.3s, box-shadow 0.3s; 
+        }
+
+        .orb-button:hover { transform: scale(1.15) rotate(15deg); box-shadow: 0 0 30px rgba(255, 128, 171, 1); }
+
+        .orb-spiral { 
+            width: 30px; height: 30px; 
+            border: 3px dashed rgba(255, 255, 255, 0.95); 
+            border-radius: 50%; 
+            border-top-color: #ff80ab; 
+            border-left-color: #ffd700; 
+            animation: spin 5s linear infinite; 
+        }
+
         @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
-        
-        /* MENU ESPIRITUAL ESTILO WINDOWS 7 */
-        .windows-menu { position: absolute; bottom: 75px; left: 0; width: 290px; background: linear-gradient(135deg, rgba(50, 10, 40, 0.95) 0%, rgba(30, 5, 25, 0.98) 100%); backdrop-filter: blur(40px); -webkit-backdrop-filter: blur(40px); border: 2px solid rgba(255, 128, 171, 0.7); border-radius: 14px 14px 4px 4px; box-shadow: 0 -15px 40px rgba(0, 0, 0, 0.9), inset 0 1px 0 rgba(255, 255, 255, 0.4); padding: 16px; display: none; opacity: 0; transform: translateY(30px) scale(0.95); transition: opacity 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.275), transform 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.275); z-index: 10000; }
+
+        /* MENU INICIAL FLUTUANTE */
+        .windows-menu { 
+            position: absolute; bottom: 82px; left: 0; width: 310px; 
+            background: linear-gradient(145deg, rgba(45, 10, 35, 0.96), rgba(20, 3, 15, 0.99)); 
+            backdrop-filter: blur(40px); 
+            border: 2px solid rgba(255, 128, 171, 0.7); 
+            border-radius: 16px 16px 6px 6px; 
+            box-shadow: 0 -20px 50px rgba(0, 0, 0, 0.95); 
+            padding: 18px; 
+            display: none; opacity: 0; 
+            transform: translateY(25px) scale(0.95); 
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275); 
+            z-index: 10000; 
+        }
+
         .windows-menu.show { display: block !important; opacity: 1; transform: translateY(0) scale(1); }
-        .win7-menu-header { background: rgba(136, 14, 79, 0.4); border: 1px solid rgba(255, 128, 171, 0.3); border-radius: 8px; padding: 10px; margin-bottom: 12px; text-align: center; }
-        .win7-menu-header h3 { font-family: 'Cinzel', serif; color: #ff80ab; font-size: 1.05rem; text-shadow: 0 1px 4px rgba(0,0,0,0.8); }
+
+        .win7-menu-header { 
+            background: rgba(136, 14, 79, 0.4); 
+            border: 1px solid rgba(255, 128, 171, 0.4); 
+            border-radius: 10px; padding: 12px; margin-bottom: 14px; text-align: center; 
+        }
+
+        .win7-menu-header h3 { font-family: 'Cinzel', serif; color: #ff94c2; font-size: 1.1rem; }
+
         .windows-menu ul { list-style: none; }
-        .windows-menu li { margin-bottom: 8px; }
-        .windows-menu a { display: flex; align-items: center; padding: 10px 14px; color: #f3e5f5; text-decoration: none; background: rgba(255, 255, 255, 0.06); border: 1px solid rgba(255, 128, 171, 0.25); border-radius: 8px; font-size: 0.95rem; font-weight: 600; transition: all 0.25s ease; }
-        .windows-menu a:hover { background: linear-gradient(90deg, rgba(171, 71, 188, 0.7), rgba(255, 128, 171, 0.5)); border-color: #ffd700; transform: translateX(6px); box-shadow: 0 0 12px rgba(255, 128, 171, 0.5); }
-        
+        .windows-menu li { margin-bottom: 10px; }
+        .windows-menu a { 
+            display: flex; align-items: center; padding: 12px 16px; 
+            color: #f3e5f5; text-decoration: none; 
+            background: rgba(255, 255, 255, 0.05); 
+            border: 1px solid rgba(255, 128, 171, 0.3); 
+            border-radius: 10px; font-weight: 600; 
+            transition: all 0.25s ease; 
+        }
+
+        .windows-menu a:hover { 
+            background: linear-gradient(90deg, rgba(186, 104, 200, 0.7), rgba(255, 128, 171, 0.5)); 
+            border-color: #ffd700; transform: translateX(8px); 
+            box-shadow: 0 0 15px rgba(255, 128, 171, 0.6); 
+        }
+
         .taskbar-player { display: flex; align-items: center; gap: 15px; }
-        .spinning-cd { width: 42px; height: 42px; border-radius: 50%; background: radial-gradient(circle, #ffd700 0%, #ff80ab 30%, #4a148c 60%, #111 100%); border: 2px solid rgba(255,255,255,0.9); box-shadow: 0 0 15px rgba(255, 128, 171, 1), inset 0 0 8px rgba(255,255,255,0.9); display: flex; align-items: center; justify-content: center; animation: spin 4s linear infinite; }
-        .spinning-cd.paused { animation-play-state: paused !important; box-shadow: 0 0 8px rgba(150, 150, 150, 0.5); }
-        .spinning-cd::after { content: ''; width: 12px; height: 12px; background: #2b091f; border: 2px solid #fff; border-radius: 50%; }
-        
-        .player-controls { display: flex; align-items: center; gap: 8px; }
-        .player-controls button { background: rgba(255, 255, 255, 0.15); border: 1px solid rgba(255, 128, 171, 0.5); color: #fff; width: 32px; height: 32px; border-radius: 50%; cursor: pointer; font-size: 0.85rem; display: flex; align-items: center; justify-content: center; transition: 0.2s; }
-        .player-controls button:hover { background: #ff80ab; color: #2b091f; box-shadow: 0 0 10px rgba(255, 128, 171, 0.8); }
-        
-        footer { text-align: center; padding: 25px 20px; background-color: #1a0513; color: #e1bee7; font-size: 0.9rem; border-top: 2px solid rgba(255, 128, 171, 0.3); line-height: 1.8; }
-        footer .dev-credit { color: #ffd700; font-weight: bold; margin-top: 6px; text-shadow: 0 2px 8px rgba(255, 215, 0, 0.5); }
+
+        .spinning-cd { 
+            width: 44px; height: 44px; border-radius: 50%; 
+            background: radial-gradient(circle, #ffd700 0%, #ff80ab 35%, #6a1b9a 70%, #111 100%); 
+            border: 2px solid rgba(255,255,255,0.9); 
+            box-shadow: 0 0 18px rgba(255, 128, 171, 1); 
+            display: flex; align-items: center; justify-content: center; 
+            animation: spin 4s linear infinite; 
+        }
+
+        .spinning-cd.paused { animation-play-state: paused !important; box-shadow: 0 0 8px rgba(150, 150, 150, 0.4); }
+        .spinning-cd::after { content: ''; width: 14px; height: 14px; background: #2b091f; border: 2px solid #fff; border-radius: 50%; }
+
+        .player-controls { display: flex; align-items: center; gap: 10px; }
+        .player-controls button { 
+            background: rgba(255, 255, 255, 0.15); 
+            border: 1px solid rgba(255, 128, 171, 0.5); 
+            color: #fff; width: 36px; height: 36px; border-radius: 50%; 
+            cursor: pointer; font-size: 0.9rem; display: flex; align-items: center; justify-content: center; 
+            transition: all 0.2s; 
+        }
+        .player-controls button:hover { background: #ff80ab; color: #2b091f; box-shadow: 0 0 12px rgba(255, 128, 171, 0.9); }
+
+        footer { text-align: center; padding: 30px; color: #e1bee7; font-size: 0.95rem; }
+        footer .dev-credit { color: #ffd700; font-weight: bold; margin-top: 8px; text-shadow: 0 0 10px rgba(255, 215, 0, 0.6); }
     </style>
 </head>
 <body>
+    <div class="stars-bg"></div>
+
     <header>
         <h1>Espaço Holístico & Terapias</h1>
         <p>Intuidanse • Iskhem Kundalini • Tarot Terapêutico • Leitura de Cartas</p>
     </header>
 
     <div class="container">
-        <div class="platform-dashboard">
+        <!-- PAINEL DE ATENDIMENTOS -->
+        <div class="magic-window">
             <h2>Plataforma de Atendimentos</h2>
             <p>Explore as práticas holísticas e caminhos de autoconhecimento disponíveis para o seu momento.</p>
             <div class="services-grid">
@@ -97,23 +312,26 @@
             </div>
         </div>
 
-        <div class="music-section">
+        <!-- SEÇÃO DE TRILHA SONORA -->
+        <div class="magic-window">
             <h2>Trilha Sonora & Atmosfera Mística</h2>
             <p>Ouça nossa playlist oficial do Spotify.</p>
             <div class="spotify-container">
-                <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/7gxQ2NEzLwx2RMCFB1nUov?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                <iframe style="border-radius:16px" src="https://open.spotify.com/embed/playlist/7gxQ2NEzLwx2RMCFB1nUov?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
             </div>
         </div>
 
+        <!-- SEÇÃO DE CONTATOS -->
         <div class="cta-section">
             <h2>Entre em Contato</h2>
             <p>Agende sua consulta ou acompanhe o trabalho nas redes sociais da nossa plataforma.</p>
-            <a href="https://wa.me/5522981751110" class="btn-whatsapp" target="_blank">Falar no WhatsApp</a>
-            <a href="https://instagram.com/amaria.liberta" class="btn-insta" target="_blank">Ver no Instagram (@amaria.liberta)</a>
-            <a href="https://instagram.com/cazuadasmarias" class="btn-cazuadas" target="_blank">Ver no Instagram (@cazuadasmarias)</a>
+            <a href="https://wa.me/5522981751110" class="btn-portal btn-whatsapp" target="_blank">Falar no WhatsApp</a>
+            <a href="https://instagram.com/amaria.liberta" class="btn-portal btn-insta1" target="_blank">Instagram Principal</a>
+            <a href="https://instagram.com/cazuadasmarias" class="btn-portal btn-insta2" target="_blank">Instagram Cazuadas</a>
         </div>
     </div>
 
+    <!-- BARRA DE TAREFAS WINDOWS 7 AERO CUSTOMIZADA -->
     <div class="windows-taskbar">
         <div class="start-btn-container">
             <div class="windows-menu" id="windowsMenu">
